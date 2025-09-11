@@ -1,0 +1,13 @@
+.paragraph {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3042a3;
+    margin-top: 15px;
+  }
+  
+  .list {
+    font-size: 16px;
+    color: #34495e;
+    margin-left: 20px;
+    list-style-type: square;
+  }

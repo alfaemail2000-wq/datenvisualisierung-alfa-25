@@ -1,0 +1,214 @@
+{
+    "questions": [
+        {
+            "question": "Wer ist der Bürgermeister von Wesel?",
+            "answers": [
+                {
+                    "antwort": "Esel",
+                    "true": true
+                },
+                {
+                    "antwort": "Wiesel",
+                    "true": false
+                },
+                {
+                    "antwort": "Bosel",
+                    "true": false
+                },
+                {
+                    "antwort": "Onkel Jürgen",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Was ist eine Farbe?",
+            "answers": [
+                {
+                    "antwort": "Warm",
+                    "true": false
+                },
+                {
+                    "antwort": "Nein",
+                    "true": false
+                },
+                {
+                    "antwort": "Rot",
+                    "true": true
+                },
+                {
+                    "antwort": "Kaninchen",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Wieviele Fragen sind gut?",
+            "answers": [
+                {
+                    "antwort": "1",
+                    "true": true
+                },
+                {
+                    "antwort": "2",
+                    "true": true
+                },
+                {
+                    "antwort": "3",
+                    "true": true
+                },
+                {
+                    "antwort": "4",
+                    "true": true
+                }
+            ]
+        },
+        {
+            "question": "Macht Javascript Spaß?",
+            "answers": [
+                {
+                    "antwort": "Ja",
+                    "true": true
+                },
+                {
+                    "antwort": "Natürlich",
+                    "true": true
+                },
+                {
+                    "antwort": "Immer",
+                    "true": true
+                },
+                {
+                    "antwort": "Uneingeschränkt",
+                    "true": true
+                }
+            ]
+        },
+        {
+            "question": "Wieviele Planeten hat das Sonnensystem (zur Zeit)?",
+            "answers": [
+                {
+                    "antwort": "9",
+                    "true": false
+                },
+                {
+                    "antwort": "8",
+                    "true": true
+                },
+                {
+                    "antwort": "142",
+                    "true": false
+                },
+                {
+                    "antwort": "Unendlich",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Wie hoch ist der Eiffelturm?",
+            "answers": [
+                {
+                    "antwort": "342 Meter",
+                    "true": false
+                },
+                {
+                    "antwort": "324 Meter",
+                    "true": true
+                },
+                {
+                    "antwort": "233 Meter",
+                    "true": false
+                },
+                {
+                    "antwort": "412 Meter",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Wer hat das Buch 'Die Verwandlung' geschrieben?",
+            "answers": [
+                {
+                    "antwort": "Franz Kafka",
+                    "true": true
+                },
+                {
+                    "antwort": "Friedrich Nietzsche",
+                    "true": false
+                },
+                {
+                    "antwort": "Thomas Mann",
+                    "true": false
+                },
+                {
+                    "antwort": "Hermann Hesse",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Was ist die Hauptstadt von Spanien?",
+            "answers": [
+                {
+                    "antwort": "Barcelona",
+                    "true": false
+                },
+                {
+                    "antwort": "Madrid",
+                    "true": true
+                },
+                {
+                    "antwort": "Rom",
+                    "true": false
+                },
+                {
+                    "antwort": "Lissabon",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Wie viele Kontinente gibt es?",
+            "answers": [
+                {
+                    "antwort": "5",
+                    "true": false
+                },
+                {
+                    "antwort": "6",
+                    "true": false
+                },
+                {
+                    "antwort": "7",
+                    "true": true
+                },
+                {
+                    "antwort": "8",
+                    "true": false
+                }
+            ]
+        },
+        {
+            "question": "Wer hat das Gemälde 'Die Mona Lisa' gemalt?",
+            "answers": [
+                {
+                    "antwort": "Vincent van Gogh",
+                    "true": false
+                },
+                {
+                    "antwort": "Pablo Picasso",
+                    "true": false
+                },
+                {
+                    "antwort": "Leonardo da Vinci",
+                    "true": true
+                },
+                {
+                    "antwort": "Michelangelo",
+                    "true": false
+                }
+            ]
+        }
+    ]
+}
