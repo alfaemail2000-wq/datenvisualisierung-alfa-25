@@ -6,11 +6,26 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title></title>
         <link rel="stylesheet" href="./assets/css/styles.css" />
-        
+
+        <script src="./assets/js/login.js" defer></script>
+        <script src="./assets/js/ajax.js" ></script>
+        <script src="./assets/js/render.js"  ></script>
+        <script src="./assets/js/dom.js" ></script>
+        <script src="./assets/js/elements.js" ></script>
         <script src="./assets/js/index.js" defer></script>
     </head>
     <body>
+        <main></main>
 
-        <button> load data on page</button>
+        <form id="loginForm">
+            <input type="text" name="username" placeholder="Benutzername" required />
+            <input type="password" name="password" placeholder="Passwort" required />
+            <button type="submit">Login</button>
+        </form>
+          
+         
+        <div id="showButton">
+        <button > load data on page</button>
+        </div>
     </body>
 </html>
