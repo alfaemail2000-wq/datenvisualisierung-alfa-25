@@ -4,7 +4,7 @@ const formlogin = {
   loggedin: false,
   
   logging() {
-     const form = document.querySelector("form");
+    const form = document.querySelector("form");
     const btn=document.querySelector("#showButton button")
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -21,7 +21,7 @@ const formlogin = {
                 // Remove 'notvisible' and add 'visible'
                 btn.classList.remove("notvisible");
                 btn.classList.add("visible");
-                form.classList.toggle("hidden")
+                form.classList.toggle("hidden");
       } else {
         console.log("Login fehlgeschlagen!");
       }

@@ -99,3 +99,12 @@ main {
   margin-left: 20px;
   list-style-type: square;
 }
+
+
+
+.bild {
+  position: relative;
+  /* display: block; */
+  height: 150px;
+  margin:5px;
+}

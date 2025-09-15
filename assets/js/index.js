@@ -3,31 +3,25 @@
 formlogin.logging()
 
 
-const handleDataload = ()=>{
+const handleDataload = () => {
+    console.log("fromjs", formlogin.loggedin);
+    if (formlogin.loggedin) {
+        dom.mapping();
+        ajax.loadJSON('assets/data/data.json', render.candidates);
 
-    
-console.log("fromjs",formlogin.loggedin);
-// if (loginformistrue) then render
+        
 
-if(formlogin.loggedin)     
-{ 
-    
-    dom.mapping();
-    ajax.loadJSON('assets/data/data.json', render.questions)
-    const form = document.querySelector("loginForm")
-    form.classList=add("hidden")
-    ;}
-else {formlogin.logging()}
+      
 
 
-
-   
-
+        const form = document.querySelector("#loginForm"); 
+        form.classList.add("hidden");
+    }
+    else { 
+        formlogin.logging();
+    }
 }
-
-
 const init = () => {
-
     const btn = document.querySelector("#showButton button")
     btn.classList.add("notvisible");
     btn.addEventListener("click", handleDataload)
@@ -41,7 +35,7 @@ init();
 
 // const init = () => {
 //     dom.mapping();
-//     ajax.loadJSON('/data/data.json', render.questions);   
+//     ajax.loadJSON('/data/data.json', render.questions);
 // }
 
 
