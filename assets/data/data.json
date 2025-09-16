@@ -1,77 +1,84 @@
 {
-    "candidates": [
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": true },
-          { "skill": "Skill B", "true": false },
-          { "skill": "Skill C", "true": false },
-          { "skill": "Skill D", "true": false }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": false },
-          { "skill": "Skill B", "true": false },
-          { "skill": "Skill C", "true": true },
-          { "skill": "Skill D", "true": false }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": true },
-          { "skill": "Skill B", "true": true },
-          { "skill": "Skill C", "true": true },
-          { "skill": "Skill D", "true": true }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": true },
-          { "skill": "Skill B", "true": true },
-          { "skill": "Skill C", "true": true },
-          { "skill": "Skill D", "true": true }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": false },
-          { "skill": "Skill B", "true": true },
-          { "skill": "Skill C", "true": false },
-          { "skill": "Skill D", "true": false }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": false },
-          { "skill": "Skill B", "true": true },
-          { "skill": "Skill C", "true": false },
-          { "skill": "Skill D", "true": false }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": true },
-          { "skill": "Skill B", "true": false },
-          { "skill": "Skill C", "true": false },
-          { "skill": "Skill D", "true": false }
-        ]
-      },
-      {
-        "candidate": "./assets/img/",
-        "skills": [
-          { "skill": "Skill A", "true": false },
-          { "skill": "Skill B", "true": true },
-          { "skill": "Skill C", "true": false },
-          { "skill": "Skill D", "true": false }
-        ]
-      }
-    ]
-  }
-  
+  "candidates": [
+    {
+      "candidate": "./assets/img/",
+      "name": "Bob",
+      "skills": [
+        { "skill": "Skill A", "true": true },
+        { "skill": "Skill B", "true": false },
+        { "skill": "Skill C", "true": false },
+        { "skill": "Skill D", "true": false }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Alice",
+      "skills": [
+        { "skill": "Skill A", "true": false },
+        { "skill": "Skill B", "true": false },
+        { "skill": "Skill C", "true": true },
+        { "skill": "Skill D", "true": false }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Charlie",
+      "skills": [
+        { "skill": "Skill A", "true": true },
+        { "skill": "Skill B", "true": true },
+        { "skill": "Skill C", "true": true },
+        { "skill": "Skill D", "true": true }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "David",
+      "skills": [
+        { "skill": "Skill A", "true": true },
+        { "skill": "Skill B", "true": true },
+        { "skill": "Skill C", "true": true },
+        { "skill": "Skill D", "true": true }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Eve",
+      "skills": [
+        { "skill": "Skill A", "true": false },
+        { "skill": "Skill B", "true": true },
+        { "skill": "Skill C", "true": false },
+        { "skill": "Skill D", "true": false }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Frank",
+      "skills": [
+        { "skill": "Skill A", "true": false },
+        { "skill": "Skill B", "true": true },
+        { "skill": "Skill C", "true": false },
+        { "skill": "Skill D", "true": false }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Grace",
+      "skills": [
+        { "skill": "Skill A", "true": true },
+        { "skill": "Skill B", "true": false },
+        { "skill": "Skill C", "true": false },
+        { "skill": "Skill D", "true": false }
+      ]
+    },
+    {
+      "candidate": "./assets/img/",
+      "name": "Hank",
+      "skills": [
+        { "skill": "Skill A", "true": false },
+        { "skill": "Skill B", "true": true },
+        { "skill": "Skill C", "true": false },
+        { "skill": "Skill D", "true": false }
+      ]
+    }
+  ]
+}

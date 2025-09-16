@@ -108,3 +108,44 @@ main {
   height: 150px;
   margin:5px;
 }
+
+.reloadbtn {
+  background-color: #4CAF50; /* green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+ 
+}
+.skill-container {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  display: block; /* keeps skills compact */
+}
+
+
+.skill-item {
+  list-style: none;
+  padding: 5px 10px;
+  margin: 2px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-weight: 500;
+  /* display: inline-block; */
+  transition: background 0.3s;
+}
+
+.skill-item:hover {
+  background-color: #5ecfd3;
+}
+
+#suchFeld.notvisible {
+  display: none;
+}
+
+#suchFeld.visible {
+  display: inline-block;
+}

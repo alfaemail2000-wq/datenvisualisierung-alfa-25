@@ -6,6 +6,8 @@ const formlogin = {
   logging() {
     const form = document.querySelector("form");
     const btn=document.querySelector("#showButton button")
+    const suchfeld=document.querySelector("#suchFeld");
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       console.log("Formular abgesendet!", event.target);
@@ -19,6 +21,8 @@ const formlogin = {
         this.loggedin = true;
         console.log("you logged in!", this.loggedin);
                 // Remove 'notvisible' and add 'visible'
+                suchfeld.classList.replace("notvisible", "visible");
+                btn.classList.replace("notvisible", "visible");
                 btn.classList.remove("notvisible");
                 btn.classList.add("visible");
                 form.classList.toggle("hidden");
