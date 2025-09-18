@@ -4,10 +4,10 @@
       "candidatepath": "./assets/img/",
       "name": "Bob",
       "skills": [
-        { "skill": "CAD Design", "true": true },
-        { "skill": "Team Collaboration", "true": false },
-        { "skill": "Microsoft Word", "true": false },
-        { "skill": "Communication", "true": false }
+        { "skill": "CAD Design", "true": true, "skillweight":76 },
+        { "skill": "Team Collaboration", "true": false, "skillweight":45 },
+        { "skill": "Microsoft Word", "true": false,"skillweight":35 },
+        { "skill": "Communication", "true": false,"skillweight":10 }
       ],
       "studium": [
         { "einrichtung": "Technische Hochschule Stuttgart" },

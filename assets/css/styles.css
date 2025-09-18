@@ -157,13 +157,22 @@ main {
 }
 
 .reloadbtn {
-  background-color: #4CAF50; /* green */
+  display: block;               /* Block-Level, damit margin auto funktioniert */
+  margin: 20px auto;            /* Zentriert horizontal und Abstand oben/unten */
+  background-color: #4CAF50;    /* Grün */
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 30px;           /* Etwas größer wie die Form-Buttons */
+  border-radius: 6px;           /* Wie die Form-Container */
   font-size: 16px;
- 
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Gleiche leichte Schatten wie Form */
+  width: 330px;                 /* Gleiche Breite wie die Form */
+  text-align: center;
+}
+
+.reloadbtn:hover {
+  background-color: #45a049;     /* Helleres Grün beim Hover */
 }
 .skill-container {
   margin: 5px 0;

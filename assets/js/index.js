@@ -38,14 +38,12 @@ render.candidates(suchitem);
 
 
 const init = () => {
+
+    // aicheck.kickeck()
   
-
-
-
-
-//to do in dom js durch mapping implementieren  
-    const suchfeld = document.querySelector("#suchFeld");
-    suchfeld.addEventListener("input", handleSuche)
+// //to do in dom js durch mapping implementieren  
+//     const suchfeld = document.querySelector("#suchFeld");
+//     suchfeld.addEventListener("input", handleSuche)
 
 //to do in dom js durch mapping implementieren
     const btn = document.querySelector("#showButton button")

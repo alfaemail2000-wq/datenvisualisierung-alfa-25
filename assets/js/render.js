@@ -4,6 +4,13 @@ const render = {
     const loadButton = document.querySelector("#showButton button");
   
 
+    const suchfeld = document.querySelector("#suchFeld");
+    suchfeld.addEventListener("input", handleSuche)
+
+
+
+
+
     for (let e of candidates) {
       // assign a random index once for each candidate if not already set
       if (e.randomIndex === undefined) {
