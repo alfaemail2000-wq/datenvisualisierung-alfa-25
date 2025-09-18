@@ -50,6 +50,53 @@ main {
   background-color: #25327a;
 }
 
+
+/* HR Form container - almost full page width */
+#HRForm {
+  display: none;                 /* hidden by default */
+  background: #79d9e0;
+  border: 1px solid #ccc;
+  padding: 20px 40px;            /* 20px top/bottom, 40px left/right */
+  width: 95%;                    /* almost full width */
+  max-width: 1200px;             /* optional max width for very large screens */
+  margin: 20px auto;             /* centered with vertical spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+
+/* Inputs inside HR form */
+#HRForm input,
+#HRForm select,
+#HRForm textarea {
+  display: block;
+  width: 100%;                   /* full width inside form */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* HR Form submit button */
+#HRForm button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#HRForm button:hover {
+  background-color: #187bcd;
+}
+
+
 /* Load data button container */
 #showButton {
   text-align: center;
@@ -139,7 +186,7 @@ main {
 }
 
 .skill-item:hover {
-  background-color: #5ecfd3;
+  background-color: #ebb859;
 }
 
 #suchFeld.notvisible {

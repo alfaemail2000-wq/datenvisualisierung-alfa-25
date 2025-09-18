@@ -1,158 +1,128 @@
 const render = {
-    candidates(candidates) {
-        //const candidates = payload.candidates;
-elements.main.innerHTML="";
-        let detailContainer = document.querySelector("#candidateDetails");
-        if (!detailContainer) {
-            detailContainer = document.createElement("div");
-            detailContainer.id = "candidateDetails";
-            document.body.appendChild(detailContainer);
-        }
+  candidates(candidates) {
+    elements.main.innerHTML = ""; // clear main list
+    const loadButton = document.querySelector("#showButton button");
+  
 
-        for (let e of candidates) {
-            console.log("questions", e.candidate);
+    for (let e of candidates) {
+      // assign a random index once for each candidate if not already set
+      if (e.randomIndex === undefined) {
+        e.randomIndex = Math.floor(Math.random() * candidates.length);
+      }
 
-            // generate and store random index ONCE
-            e.randomIndex = Math.floor(Math.random() * 8);
-
-            // create candidate img in main list
-            const elCandidate = dom.create(
-                e.candidate,
-                "img",
-                elements.main,
-                "container",
-                `./assets/img/${e.randomIndex}.PNG`
-            );
-
-            // add click event
-          
-            elCandidate.addEventListener("click", () => {
-                // hide all candidates (query instead of array)
-                const deselectDivBtn=document.querySelector("#showButton")
-                const allCandidates = elements.main.querySelectorAll("img");
-
-                for (let c of allCandidates) {
-                    c.style.display = "none";
-                    deselectDivBtn.style.display="none";
-
-                }
-
-                // show only this candidate in detail container
-                showCandidateDetails(e, detailContainer);
-            });
-        }
-    }
-};
-
-function showCandidateDetails(candidate, container) {
-    container.innerHTML = ""; // clear previous content
-
-    // use the SAME random index stored earlier
-    dom.create(
-        candidate.candidate,
+      // create candidate image in main container
+      const elCandidate = dom.create(
+        false, // no innerHTML
         "img",
-        container,
-        "container",
-        `./assets/img/${candidate.randomIndex}.PNG`
-    );
+        elements.main,
+        "candidate-img",
+        `${e.candidatepath}${e.randomIndex}.PNG`
+      );
+
+      elCandidate.addEventListener("click", () => {
+        // hide all main images
+        const allCandidates = elements.main.querySelectorAll(".candidate-img");
+        allCandidates.forEach(c => (c.style.display = "none"));
+
+        // hide load button
+        if (loadButton) loadButton.style.display = "none";
+
+        // remove old detail section if exists
+        const oldDetail = document.querySelector("#candidateDetails");
+        if (oldDetail) oldDetail.remove();
+
+        // create detail section
+        const container = document.createElement("div");
+        container.id = "candidateDetails";
+        elements.main.appendChild(container);
+
+        // create selected image **only in detail container**
+        dom.create(
+          false,
+          "img",
+          container,
+          "container",
+          `${e.candidatepath}${e.randomIndex}.PNG`
+        );
+
+
+        const nameDiv = dom.create(false, "div", container, "candidate-name", false);
+        dom.create(e.name, "h1", nameDiv, false, false);
+
+        const skillBeschrift = dom.create(false, "div", container, "candidate-name", false);
+        const h2_Skills = dom.create("-skills-", "h2", nameDiv, false, false);
+        h2_Skills.style.color = "#1e90ff";
+        // show skills
+        for (let skill of e.skills) {
+
+          const skillDiv = dom.create(false, "div", container, "skill-container", false);
+          dom.create(skill.skill, "li", skillDiv, "skill-item", false);
+        }
+
+        const ausbildungsBeschrift = dom.create(false, "div", container, "candidate-name", false);
+        const h2_Ausbildung = dom.create("-ausbildung-", "h2", ausbildungsBeschrift, false, false);
+        h2_Ausbildung.style.color = "#1e90ff";
+
+
+        for (let ausbildeinricht of e.studium) {
+          const studiumDiv = dom.create(false, "div", container, "skill-container", false);
+          dom.create(ausbildeinricht.einrichtung, "li", studiumDiv, "skill-item", false)
+          console.log("Ausbildeinricht", ausbildeinricht.einrichtung, "studium", e.studium);
+
+        }
+        const hrform = document.querySelector("#HRForm");
+        if (hrform) {
+          const clone = hrform.cloneNode(true); // clone including inputs
+          clone.style.display = "block";
+          container.appendChild(clone);
+
+          const showButton = document.querySelector("#showFormDataBtn");
+
+          handleSubmit=(evt)=>{
+            evt.preventDefault();
+            const formdata = new FormData(clone);
+            const dataObj=Object.fromEntries(formdata.entries())
+            //console.log("this is formData", formdata);
+            localStorage.setItem("HRFormData", JSON.stringify(dataObj));
+            showButton.hidden = false;
+          }
+          
+          clone.addEventListener("submit",handleSubmit);
 
 
 
-    // render skills
-    for (let a of candidate.skills) {
-        const licontainer = dom.create(false, "div", container, "skill-container", false);
-        dom.create(a.skill, "li", licontainer, "skill-item", false);
-        console.log("This is SKILL:" + a.skill);
+          document.querySelector("#showFormDataBtn").addEventListener("click", () => {
+            localstoragerender.renderSavedData("#savedDataContainer");
+          });
+        }
 
+
+
+        // reload button
+        const reloadBtn = document.createElement("button");
+        reloadBtn.textContent = "Reload All";
+        reloadBtn.classList.add("reloadbtn");
+        container.appendChild(reloadBtn);
+
+        reloadBtn.addEventListener("click", () => {
+          container.remove();
+          elements.main.innerHTML = "";
+          if (loadButton) loadButton.style.display = "inline-block";
+
+
+          //todos deselect the show saved from data
+          if (showButton) showButton.hidden = true;
+
+          dom.mapping();
+          ajax.loadJSON("assets/data/data.json", payload => {
+            payload.candidates.forEach(c => {
+              c.randomIndex = Math.floor(Math.random() * payload.candidates.length);
+            });
+            render.candidates(payload.candidates);
+
+          });
+        });
+      });
     }
-
-
-    const reloadBtn = document.createElement("button");
-    reloadBtn.textContent = "Reload All";
-    reloadBtn.classList.add("reloadbtn")
-    container.append(reloadBtn);
-
-    // reload logic
-    reloadBtn.addEventListener("click", () => {
-        // 1. Clear the detail view
-        container.innerHTML = "";
-        // 2. Clear the main list
-        elements.main.innerHTML = "";
-        // 3. Reload candidates from JSON
-        dom.mapping();
-        ajax.loadJSON("assets/data/data.json", render.candidates);
-    });
-
-   
-
-    // function checkCandidates (){
-    //     console.log("Candidates log test search event ", candidates);
-        
-    //     dom.mapping();
-    //     ajax.loadJSON("assets/data/data.json", render.candidates);
-
-    //     const searchstr=suchfeld.value.trim().toLowerCase();
-
-    //     for (let i=0;i<candidates.length;i++){
-    //         const item=candidates[i];
-    //         console.log(item);
-            
-    //     }
-
-      
-    // }
-
-
-
-
-    // suchfeld.addEventListener("input",(e)=>{
-    //     console.log("this is text input value", e.target.value);
-        
-    //     //dom.mapping();
-    //     //ajax.loadJSON("assets/data/data.json", render.candidates);
-    //     for (persone in candidates){
-    //         if(persone.candidate==e.target.textContent){
-    //             //render and create a candidate selected 
-    //             showCandidateDetails(e, detailContainer);
-    //         }
-
-    //     }
-
-    // })
-
-
-
-
-         
-    
-            
-    
-}
-
-
-
-
-
-    
-
-
-
-// suchfeld.addEventListener("input", (e) => {
-//     const searchStr = e.target.value.trim().toLowerCase();
-//     console.log("Searching for:", searchStr);
-//     // filter logic here
-
-//     for (let i=0;i<candidates.length;i++){
-//         const item=candidates[i];
-//         console.log(item);
-        
-//     }
-//     if(searchstr && item.textContent.toLowerCase().includes(searchstr)){
-//         item.className="found";
-//         console.log("found",searchstr);
-        
-
-//     } else {
-//         item.className="";
-//     }
-// });
+  }
+};

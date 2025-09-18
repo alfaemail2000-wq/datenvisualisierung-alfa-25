@@ -1,83 +1,123 @@
 {
   "candidates": [
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Bob",
       "skills": [
-        { "skill": "Skill A", "true": true },
-        { "skill": "Skill B", "true": false },
-        { "skill": "Skill C", "true": false },
-        { "skill": "Skill D", "true": false }
+        { "skill": "CAD Design", "true": true },
+        { "skill": "Team Collaboration", "true": false },
+        { "skill": "Microsoft Word", "true": false },
+        { "skill": "Communication", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Technische Hochschule Stuttgart" },
+        { "einrichtung": "Realschule Ludwigsburg" },
+        { "einrichtung": "Kindergarten Kornwestheim" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Alice",
       "skills": [
-        { "skill": "Skill A", "true": false },
-        { "skill": "Skill B", "true": false },
-        { "skill": "Skill C", "true": true },
-        { "skill": "Skill D", "true": false }
+        { "skill": "JavaScript", "true": false },
+        { "skill": "React.js", "true": false },
+        { "skill": "Python", "true": true },
+        { "skill": "Data Analysis", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Universität Heidelberg" },
+        { "einrichtung": "Gymnasium Mannheim" },
+        { "einrichtung": "Kindergarten Schwetzingen" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Charlie",
       "skills": [
-        { "skill": "Skill A", "true": true },
-        { "skill": "Skill B", "true": true },
-        { "skill": "Skill C", "true": true },
-        { "skill": "Skill D", "true": true }
+        { "skill": "Project Management", "true": true },
+        { "skill": "Agile Scrum", "true": true },
+        { "skill": "Leadership", "true": true },
+        { "skill": "Time Management", "true": true }
+      ],
+      "studium": [
+        { "einrichtung": "Hochschule München" },
+        { "einrichtung": "Wirtschaftsschule Augsburg" },
+        { "einrichtung": "Kindergarten Neu-Ulm" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "David",
       "skills": [
-        { "skill": "Skill A", "true": true },
-        { "skill": "Skill B", "true": true },
-        { "skill": "Skill C", "true": true },
-        { "skill": "Skill D", "true": true }
+        { "skill": "Python", "true": true },
+        { "skill": "Machine Learning", "true": true },
+        { "skill": "Data Visualization", "true": true },
+        { "skill": "SQL", "true": true }
+      ],
+      "studium": [
+        { "einrichtung": "RWTH Aachen" },
+        { "einrichtung": "Gymnasium Düsseldorf" },
+        { "einrichtung": "Kindergarten Köln" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Eve",
       "skills": [
-        { "skill": "Skill A", "true": false },
-        { "skill": "Skill B", "true": true },
-        { "skill": "Skill C", "true": false },
-        { "skill": "Skill D", "true": false }
+        { "skill": "Graphic Design", "true": false },
+        { "skill": "UX/UI", "true": true },
+        { "skill": "Illustrator", "true": false },
+        { "skill": "Photoshop", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Kunsthochschule Berlin-Weißensee" },
+        { "einrichtung": "Gesamtschule Potsdam" },
+        { "einrichtung": "Kindergarten Berlin-Mitte" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Frank",
       "skills": [
-        { "skill": "Skill A", "true": false },
-        { "skill": "Skill B", "true": true },
-        { "skill": "Skill C", "true": false },
-        { "skill": "Skill D", "true": false }
+        { "skill": "Java", "true": false },
+        { "skill": "Spring Boot", "true": true },
+        { "skill": "REST APIs", "true": false },
+        { "skill": "Unit Testing", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Universität Hamburg" },
+        { "einrichtung": "Fachoberschule Kiel" },
+        { "einrichtung": "Kindergarten Flensburg" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Grace",
       "skills": [
-        { "skill": "Skill A", "true": true },
-        { "skill": "Skill B", "true": false },
-        { "skill": "Skill C", "true": false },
-        { "skill": "Skill D", "true": false }
+        { "skill": "HTML/CSS", "true": true },
+        { "skill": "Responsive Design", "true": false },
+        { "skill": "Bootstrap", "true": false },
+        { "skill": "Accessibility", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Universität Leipzig" },
+        { "einrichtung": "Gymnasium Chemnitz" },
+        { "einrichtung": "Kindergarten Dresden" }
       ]
     },
     {
-      "candidate": "./assets/img/",
+      "candidatepath": "./assets/img/",
       "name": "Hank",
       "skills": [
-        { "skill": "Skill A", "true": false },
-        { "skill": "Skill B", "true": true },
-        { "skill": "Skill C", "true": false },
-        { "skill": "Skill D", "true": false }
+        { "skill": "Networking", "true": false },
+        { "skill": "Linux Administration", "true": true },
+        { "skill": "Security Basics", "true": false },
+        { "skill": "Shell Scripting", "true": false }
+      ],
+      "studium": [
+        { "einrichtung": "Technische Universität Dortmund" },
+        { "einrichtung": "Berufskolleg Essen" },
+        { "einrichtung": "Kindergarten Bochum" }
       ]
     }
   ]

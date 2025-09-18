@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
 
         <script src="./assets/js/login.js" ></script>
+        <script src="./assets/js/localstoragerender.js"></script>
         <script src="./assets/js/ajax.js" ></script>
         <script src="./assets/js/render.js" ></script>
         <script src="./assets/js/dom.js" ></script>
@@ -26,10 +27,66 @@
             <input type="password" name="password" placeholder="Passwort" required />
             <button type="submit">Login</button>
         </form>
+
+
+
+
+
+        <form id="HRForm" hidden>
+            <label for="eingabehr">eingabehr</label>
+            <input type="text" id="eingabehr" ><br><br>
+            <label for="bewerbungsnote">bewerbungsnote</label>
+            <input type="text" id="bewerbungsnote" ><br><br>
+            <label>
+                <input type="checkbox" name="erfolgreich" value="ja">
+                Kandidat erfolgreich?
+              </label><br><br>
+                              <!-- Radio-Buttons -->
+                              <label>Geschlecht:</label>
+                              <input type="radio" id="maennlich" name="geschlecht" value="maennlich">
+                              <label for="maennlich">Männlich</label>
+                              <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+                              <label for="weiblich">Weiblich</label>
+                              <input type="radio" id="divers" name="geschlecht" value="divers">
+                              <label for="divers">Divers</label><br><br>
+                            
+                              <!-- Dropdown (Select) -->
+                              <label for="land">Land:</label>
+                              <select id="land" name="land">
+                                <option value="">Bitte wählen</option>
+                                <option value="de">Deutschland</option>
+                                <option value="at">Österreich</option>
+                                <option value="ch">Schweiz</option>
+                              </select><br><br>
+                            
+                              <!-- Mehrfachauswahl (Select multiple) -->
+                              <label for="sprachen">Sprachkentnisse Deutsch:</label>
+                              <select id="sprachen" name="sprachen" multiple>
+                                <option value="A1-2">A1-2</option>
+                                <option value="B1-2">B1-2</option>
+                                <option value="C1-2">C1-2</option>
+                                <option value="weitere">Weitere sprachkentnisse</option>
+                              </select><br><br>
+                            
+                              <!-- Range (Schieberegler) -->
+                              <label for="zufriedenheit">Zufriedenheit (1-10):</label>
+                              <input type="range" id="zufriedenheit" name="zufriedenheit" min="1" max="10"><br><br>
+                            
+                              <!-- Submit Button -->
+                              <button>Absenden / Speichern</button>
+                          
+
+        </form>
           
          
         <div id="showButton">
         <button > load data on page</button>
+
+
         </div>
+
+        <button id="showFormDataBtn" hidden>Show Saved Form Data</button>
+        <div id="savedDataContainer"></div>
+        <div id="savedDataContainer"></div>
     </body>
 </html>

@@ -7,15 +7,23 @@ const handleDataload = () => {
     console.log("fromjs", formlogin.loggedin);
     if (formlogin.loggedin) {
         dom.mapping();
-        ajax.loadJSON('assets/data/data.json', payload=>{
+
+        ajax.loadJSON('assets/data/data.json', payload => {
+            // assign a random index to each candidate once
+            payload.candidates.forEach(c => {
+                if (c.randomIndex === undefined) {
+                    c.randomIndex = Math.floor(Math.random() * payload.candidates.length);
+                }
+            });
+
             render.candidates(payload.candidates);
-            datastore.payload=payload;
+            datastore.payload = payload;
+            
         });
 
         const form = document.querySelector("#loginForm");
         form.classList.add("hidden");
-    }
-    else {
+    } else {
         formlogin.logging();
     }
 }
@@ -31,6 +39,10 @@ render.candidates(suchitem);
 
 const init = () => {
   
+
+
+
+
 //to do in dom js durch mapping implementieren  
     const suchfeld = document.querySelector("#suchFeld");
     suchfeld.addEventListener("input", handleSuche)
