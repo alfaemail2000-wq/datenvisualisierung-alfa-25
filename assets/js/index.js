@@ -6,7 +6,7 @@ formlogin.logging()
 const handleDataload = () => {
     console.log("fromjs", formlogin.loggedin);
     if (formlogin.loggedin) {
-        dom.mapping();
+       dom.mapping();
 
         ajax.loadJSON('assets/data/data.json', payload => {
             // assign a random index to each candidate once

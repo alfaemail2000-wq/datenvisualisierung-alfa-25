@@ -62,7 +62,7 @@
     },
     {
       "candidatepath": "./assets/img/",
-      "name": "Eve",
+      "name": "Frank",
       "skills": [
         { "skill": "Graphic Design", "true": false },
         { "skill": "UX/UI", "true": true },

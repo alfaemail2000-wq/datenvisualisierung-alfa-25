@@ -2,7 +2,7 @@ const render = {
   candidates(candidates) {
     elements.main.innerHTML = ""; // clear main list
     const loadButton = document.querySelector("#showButton button");
-  
+
 
     const suchfeld = document.querySelector("#suchFeld");
     suchfeld.addEventListener("input", handleSuche)
@@ -56,7 +56,6 @@ const render = {
         const nameDiv = dom.create(false, "div", container, "candidate-name", false);
         dom.create(e.name, "h1", nameDiv, false, false);
 
-        const skillBeschrift = dom.create(false, "div", container, "candidate-name", false);
         const h2_Skills = dom.create("-skills-", "h2", nameDiv, false, false);
         h2_Skills.style.color = "#1e90ff";
         // show skills
@@ -85,16 +84,16 @@ const render = {
 
           const showButton = document.querySelector("#showFormDataBtn");
 
-          handleSubmit=(evt)=>{
+          handleSubmit = (evt) => {
             evt.preventDefault();
             const formdata = new FormData(clone);
-            const dataObj=Object.fromEntries(formdata.entries())
+            const dataObj = Object.fromEntries(formdata.entries())
             //console.log("this is formData", formdata);
             localStorage.setItem("HRFormData", JSON.stringify(dataObj));
             showButton.hidden = false;
           }
-          
-          clone.addEventListener("submit",handleSubmit);
+
+          clone.addEventListener("submit", handleSubmit);
 
 
 
